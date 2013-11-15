@@ -1,12 +1,14 @@
 
-# angular-seed — the seed for AngularFire apps
+# angular-seed-more — a seed for AngularFire apps
 
-This project is an application skeleton for a typical [AngularFire](http://angularfire.com/) web app.
+This project is a derivative application skeleton for an [AngularFire](http://angularfire.com/) web app.
+It is a fork of the original angular-seed repo with some extra libs and
+functionality that I commonly use in developing apps.
 This library allows you to quickly bootstrap real-time apps using [Firebase](http://www.firebase.com) and [AngularJS](http://www.angularjs.org).
 
 The seed contains AngularJS libraries, test libraries and a bunch of scripts all preconfigured for
-instant web development gratification. Just clone the repo (or download the zip/tarball), start up
-our (or yours) webserver and you are ready to develop and test your application.
+instant web development gratification.  Additionally, Bootstrap is included and pre-wired in views.
+Just clone the repo (or download the zip/tarball), start up our (or yours) webserver and you are ready to develop and test your application.
 
 The seed app doesn't do much, just shows how to wire two controllers and views together. You can
 check it out by opening app/index.html in your browser (might not work file `file://` scheme in
@@ -19,11 +21,12 @@ sandbox implementation varies between browsers, but quite often prevents things 
 etc to function properly when an html page is opened via `file://` scheme instead of `http://`._
 
 
-## How to use angularFire-seed
+## How to use this repo
 
  1. Clone the angularFire-seed repository
  1. Open app/js/config.js and add your Firebase URL
  1. Start hacking...
+
 
 ### Running the app during development
 
@@ -34,24 +37,6 @@ You can pick one of these options:
 
 Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
 your browser.
-
-
-### Running the app in production
-
-Make sure you set up security rules for your Firebase! An example for this
-seed can be found in `config/security-rules.json`
-
-This really depends on how complex is your app and the overall infrastructure of your system, but
-the general rule is that all you need in production are all the files under the `app/` directory.
-Everything else should be omitted.
-
-Angular apps are really just a bunch of static html, css and js files that just need to be hosted
-somewhere, where they can be accessed by browsers.
-
-If your Angular app is talking to the backend server via xhr or other means, you need to figure
-out what is the best way to host the static files to comply with the same origin policy if
-applicable. Usually this is done by hosting the files by the backend server or through
-reverse-proxying the backend server(s) and a webserver(s).
 
 
 ### Running unit tests
@@ -86,68 +71,10 @@ info.
   * run the tests from console with [Karma](http://karma-runner.github.io) via
     `scripts/e2e-test.sh` or `script/e2e-test.bat`
 
-### Receiving updates from upstream
 
-When we upgrade angular-seed's repo with newer angular or testing library code, you can just
-fetch the changes and merge them into your project with git.
+## References
 
-## Directory Layout
-
-    app/                --> all of the files to be used in production
-      css/              --> css files
-        app.css         --> default stylesheet
-      img/              --> image files
-      index.html        --> app layout file (the main html template file of the app)
-      index-async.html  --> just like index.html, but loads js files asynchronously
-      js/               --> javascript files
-        app.js          --> application
-        controllers.js  --> application controllers
-        directives.js   --> application directives
-        filters.js      --> custom angular filters
-        services.js     --> custom angular services
-      lib/              --> angular and 3rd party javascript libraries
-        angular/
-          angular.js        --> the latest angular js
-          angular.min.js    --> the latest minified angular js
-          angular-*.js      --> angular add-on modules
-          version.txt       --> version number
-        firebase/
-          angularFire.js    --> the angularFire adapter
-      partials/             --> angular view partials (partial html templates)
-        partial1.html       --> a rudimentary angularFire example
-        partial2.html       --> a rudimentary angularFireCollection example
-        login.html          --> authentication and registration using angularFire email/password auth
-        account.html        --> a secured page (must login to view this)
-
-    config/karma.conf.js        --> config file for running unit tests with Karma
-    config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
-    config/security-rules.json  --> sample security rules for your Firebase
-
-    scripts/            --> handy shell/js/ruby scripts
-      e2e-test.sh       --> runs end-to-end tests with Karma (*nix)
-      e2e-test.bat      --> runs end-to-end tests with Karma (windows)
-      test.bat          --> autotests unit tests with Karma (windows)
-      test.sh           --> autotests unit tests with Karma (*nix)
-      web-server.js     --> simple development webserver based on node.js
-
-    test/               --> test source files and libraries
-      e2e/              -->
-        runner.html     --> end-to-end test runner (open in your browser to run)
-        scenarios.js    --> end-to-end specs
-      lib/
-        angular/                --> angular testing libraries
-          angular-mocks.js      --> mocks that replace certain angular services in tests
-          angular-scenario.js   --> angular's scenario (end-to-end) test runner library
-          version.txt           --> version file
-      unit/                     --> unit level specs/tests
-        configSpec.js           --> specs for config.js file
-        controllersSpec.js      --> specs for controllers
-        directivessSpec.js      --> specs for directives
-        filtersSpec.js          --> specs for filters
-        servicesSpec.js         --> specs for services
-
-## Contact
-
-More information on AngularFire: http://angularfire.com
-More information on Firebase: http://firebase.com
 More information on AngularJS: http://angularjs.org/
+More information on Firebase: http://firebase.com/
+More information on AngularFire: http://angularfire.com/
+More information on Bootstrap: http://getbootstrap.com/
